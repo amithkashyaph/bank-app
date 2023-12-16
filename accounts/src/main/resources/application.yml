@@ -14,3 +14,22 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "prod"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related to Dev APIs"
+  contactDetails:
+    name: "Amith Kashyap Dev"
+    email: "amith_dev@gmail.com"
+  onCallSupport:
+    - (1234)56789
+    - (0987)654321
