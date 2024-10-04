@@ -18,6 +18,22 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EntityScan("com.eazybytes.loans.model")*/
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @EnableConfigurationProperties(value = {LoansContactInfo.class})
+@OpenAPIDefinition(
+		info = @Info(
+				title = "Cards microservice REST API Documentation",
+				description = "EazyBank Loans microservice REST API Documentation",
+				version = "v1",
+				contact = @Contact(
+						name = "Amith Kashyap",
+						email = "tutor@eazybytes.com",
+						url = "https://www.eazybytes.com"
+				),
+				license = @License(
+						name = "Apache 2.0",
+						url = "https://www.amith.com"
+				)
+		)
+)
 public class LoansApplication {
 
 	public static void main(String[] args) {
